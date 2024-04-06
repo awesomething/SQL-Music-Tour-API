@@ -64,8 +64,10 @@ h1 {
 /* Form styling */
 form {
   display: flex;
-  flex-direction: column;
-  gap: 10px; /* Add spacing between form elements */
+  justify-content: center; /* Center elements horizontally */
+  align-items: center;
+  /* flex-direction: column;
+  gap: 10px;  */
 }
 
 label {
@@ -91,31 +93,45 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0069cc; /* Darken the button color on hover */
+  background-color: #0069cc; 
 }
 
 /* Query result section */
 .query-result {
-  margin-top: 20px; /* Add space above the query result */
+  margin-top: 20px; 
 }
 
 h2 {
-  font-size: 1.2rem; /* Adjust font size for query result heading */
-  margin-bottom: 10px; /* Add some space below the heading */
+  font-size: 1.2rem;
+  margin-bottom: 10px; 
 }
 
 .query-result div {
-  display: flex; /* Arrange query results in a row */
-  flex-wrap: wrap; /* Allow wrapping to multiple lines if needed */
-  gap: 10px; /* Add spacing between query results */
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 10px; 
   padding: 10px;
-  border: 1px solid #ddd; /* Light gray border for each result */
-  border-radius: 3px; /* Add subtle border radius */
+  border: 1px solid #ddd; 
+  border-radius: 3px; 
 }
 
-/* Customize these styles for specific data points within the query results */
 .query-result div span {
-  font-size: 0.9rem; /* Adjust font size for query result data */
-  color: #333; /* Gray color for the data text */
-  /* Add specific styles for each data point (name, genre, start time, end time) */
+  font-size: 0.9rem; 
+  color: #333; 
+}
+
+.query-result table {
+  border-collapse: collapse; /* Remove borders between cells */
+  width: 100%; /* Make the table fill the available width */
+}
+
+.query-result th,
+.query-result td {
+  padding: 10px; /* Add padding to cells */
+  border: 1px solid #ddd; /* Add a light gray border */
+}
+
+.query-result thead th {
+  text-align: left; /* Align table headers to the left */
+  font-weight: bold; /* Make headers bold */
 }

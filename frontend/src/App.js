@@ -40,17 +40,36 @@ function App() {
       </form>
       <div className="query-result">
         <h2>Query Result</h2>
+        <table>
+          <thead>
+            <tr>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            
         {queryResult.map((item, index) => {
           return (
-            <div key={item.id} className="query-result-item">
-              <span>{item.name}</span>
-              <span>{item.genre}</span>
-              <span>{item.available_start_time}</span>
-              <span>{item.end_time}</span>
-            </div>
+            <tr key={item.id} className="query-result-item">
+              <td>{item.name}</td>
+              <td>{item.genre}</td>
+              <td>{item.available_start_time}</td>
+              <td>{item.end_time}</td>
+            </tr>
           );
         })}
-      </div>
+      </tbody>
+      </table>
+      {/* <div key={item.id} className="query-result-item">
+        <span>{item.name}</span>
+        <span>{item.genre}</span>
+        <span>{item.available_start_time}</span>
+        <span>{item.end_time}</span>
+      </div> */}
+    </div>
     </div>
   );
 }
