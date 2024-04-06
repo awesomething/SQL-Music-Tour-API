@@ -18,19 +18,6 @@ app.use(express.urlencoded({ extended: true }))
 /* define route handlers */
 app.use('/api', apiRouter);
 
-// SEQUELIZE CONNECTION
-// const sequelize = new Sequelize({
-//     storage: process.env.PG_URI,
-//     dialect: 'postgres',
-//     username: 'postgres',
-//     password: 'Love1221'
-//   })
-// try {
-//     sequelize.authenticate()
-//     console.log(`Connected with Sequelize at ${process.env.PG_URI}`)
-// }catch(err) {
-//     console.log(`Unable to connect to PG: ${err}`)
-// }
 
 // CONTROLLERS 
 const bandsController = require('./controllers/bands_controller')

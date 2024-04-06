@@ -12,7 +12,6 @@ aiController.promptReceiver = (req, res, next) => {
     'You are a SQL expert. This is a table schema. I will type natural language and you will return a JSON object with only one property called query, and the value is SQL query string. \
     ### Postgres SQL bands table with its properties: \
     # \
-    # categories(category, categoryname) \
     # band_id \
     # name \
     # genre \
